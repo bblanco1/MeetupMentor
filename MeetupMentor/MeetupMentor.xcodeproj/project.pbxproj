@@ -21,6 +21,9 @@
 		3B77F9F51BE5112A004020E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B77F9F31BE5112A004020E4 /* Main.storyboard */; };
 		3B77F9F71BE5112A004020E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B77F9F61BE5112A004020E4 /* Assets.xcassets */; };
 		3B77F9FA1BE5112A004020E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B77F9F81BE5112A004020E4 /* LaunchScreen.storyboard */; };
+		3B77FA2E1BE5470D004020E4 /* CustomUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA2D1BE5470D004020E4 /* CustomUser.m */; };
+		3B77FA311BE547BA004020E4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA301BE547BA004020E4 /* LoginViewController.m */; };
+		3B77FA571BE5809E004020E4 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA561BE5809E004020E4 /* TabBarController.m */; };
 		5D761C531BE528CC00262204 /* MeetupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D761C521BE528CC00262204 /* MeetupManager.m */; settings = {ASSET_TAGS = (); }; };
 		5D761C561BE567BE00262204 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D761C541BE546E400262204 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
@@ -50,6 +53,13 @@
 		3B77F9F61BE5112A004020E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B77F9F91BE5112A004020E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B77F9FB1BE5112A004020E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B77FA2B1BE54683004020E4 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		3B77FA2C1BE5470D004020E4 /* CustomUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUser.h; sourceTree = "<group>"; };
+		3B77FA2D1BE5470D004020E4 /* CustomUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUser.m; sourceTree = "<group>"; };
+		3B77FA2F1BE547BA004020E4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		3B77FA301BE547BA004020E4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		3B77FA551BE5809E004020E4 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		3B77FA561BE5809E004020E4 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		40E44ED531C23BBF9DE47B96 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5D761C511BE528CC00262204 /* MeetupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupManager.h; sourceTree = "<group>"; };
 		5D761C521BE528CC00262204 /* MeetupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetupManager.m; sourceTree = "<group>"; };
@@ -91,8 +101,15 @@
 		3B77F9E91BE5112A004020E4 /* MeetupMentor */ = {
 			isa = PBXGroup;
 			children = (
+				3B77FA2B1BE54683004020E4 /* Config.h */,
 				3B77F9ED1BE5112A004020E4 /* AppDelegate.h */,
 				3B77F9EE1BE5112A004020E4 /* AppDelegate.m */,
+				3B77FA2C1BE5470D004020E4 /* CustomUser.h */,
+				3B77FA2D1BE5470D004020E4 /* CustomUser.m */,
+				3B77FA2F1BE547BA004020E4 /* LoginViewController.h */,
+				3B77FA301BE547BA004020E4 /* LoginViewController.m */,
+				3B77FA551BE5809E004020E4 /* TabBarController.h */,
+				3B77FA561BE5809E004020E4 /* TabBarController.m */,
 				5D761C511BE528CC00262204 /* MeetupManager.h */,
 				5D761C521BE528CC00262204 /* MeetupManager.m */,
 				22CA7FF01BE526D2006C4144 /* MeetupsViewController.h */,
@@ -178,7 +195,7 @@
 				TargetAttributes = {
 					3B77F9E61BE5112A004020E4 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = N2DCZ2U592;
+						DevelopmentTeam = 3HZSHG8SUA;
 					};
 				};
 			};
@@ -257,10 +274,13 @@
 				22CA7FF81BE52715006C4144 /* ChooseMentorCollectionViewController.m in Sources */,
 				22CA7FF51BE526F4006C4144 /* MeetupDetailViewController.m in Sources */,
 				22CA7FFB1BE52744006C4144 /* MyConnectionsTableViewController.m in Sources */,
+				3B77FA311BE547BA004020E4 /* LoginViewController.m in Sources */,
+				3B77FA571BE5809E004020E4 /* TabBarController.m in Sources */,
 				22CA7FF21BE526D2006C4144 /* MeetupsViewController.m in Sources */,
 				5D761C531BE528CC00262204 /* MeetupManager.m in Sources */,
 				22DFD4FF1BE5497D00BA26DD /* MentorDummy.m in Sources */,
 				22CA7FFE1BE5275C006C4144 /* ChatViewController.m in Sources */,
+				3B77FA2E1BE5470D004020E4 /* CustomUser.m in Sources */,
 				3B77F9EC1BE5112A004020E4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
