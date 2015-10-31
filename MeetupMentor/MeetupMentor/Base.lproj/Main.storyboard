@@ -71,7 +71,7 @@
         <!--MeetupDetailViewController-->
         <scene sceneID="ntf-hk-WE9">
             <objects>
-                <viewController id="PPb-nk-G2G" userLabel="MeetupDetailViewController" customClass="MeetupDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MeetupDetailViewController" id="PPb-nk-G2G" userLabel="MeetupDetailViewController" customClass="MeetupDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ANw-w1-Tgt"/>
                         <viewControllerLayoutGuide type="bottom" id="van-K1-Fwm"/>
@@ -80,7 +80,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QH5-9P-cqa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QH5-9P-cqa">
                                 <rect key="frame" x="225" y="72" width="150" height="150"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -88,7 +88,7 @@
                                     <constraint firstAttribute="width" constant="150" id="tl9-qv-27W"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zu-LZ-NAv">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zu-LZ-NAv">
                                 <rect key="frame" x="167" y="448" width="267" height="84"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
