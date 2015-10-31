@@ -19,6 +19,7 @@
 		3B77F9F71BE5112A004020E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B77F9F61BE5112A004020E4 /* Assets.xcassets */; };
 		3B77F9FA1BE5112A004020E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B77F9F81BE5112A004020E4 /* LaunchScreen.storyboard */; };
 		5D761C531BE528CC00262204 /* MeetupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D761C521BE528CC00262204 /* MeetupManager.m */; settings = {ASSET_TAGS = (); }; };
+		5D761C561BE567BE00262204 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D761C541BE546E400262204 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D761C561BE567BE00262204 /* CoreLocation.framework in Frameworks */,
 				219C20CF023BCC15A88FC526 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
