@@ -8,7 +8,8 @@
 
 #import "MeetupDetailViewController.h"
 
-@interface MeetupDetailViewController ()
+
+@interface MeetupDetailViewController () 
 
 
 
