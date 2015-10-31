@@ -62,6 +62,14 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.mentors addObject:elber];
     [self.mentors addObject:jackie];
     [self.mentors addObject:daniel];
+    [self.mentors addObject:brian];
+    [self.mentors addObject:elber];
+    [self.mentors addObject:jackie];
+    [self.mentors addObject:daniel];
+    [self.mentors addObject:brian];
+    [self.mentors addObject:elber];
+    [self.mentors addObject:jackie];
+    [self.mentors addObject:daniel];
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -69,7 +77,6 @@ static NSString * const reuseIdentifier = @"Cell";
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
-
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
@@ -129,7 +136,19 @@ static NSString * const reuseIdentifier = @"Cell";
 
 #pragma mark <UICollectionViewDelegate>
 
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+-(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction* selectMentor = [UIAlertAction actionWithTitle:@"Select mentor" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
+                                                         handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:selectMentor];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
     
     return YES;
 }
