@@ -10,12 +10,21 @@
 
 #import "MeetupManager.h"
 
-@interface MeetupsViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+#import "MeetupDetailViewController.h"
+
+#import <CoreLocation/CoreLocation.h>
+
+
+@interface MeetupsViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView* tableView;
 @property (nonatomic, weak) IBOutlet UITextField* textField;
 
 @property (nonatomic) NSMutableArray* meetupResultsArray;
+
+@property (nonatomic) CLLocationManager* locationManager;
+@property (nonatomic) CLLocation* currentLocation;
+
 
 @end
 
@@ -26,6 +35,17 @@
 {
     [super viewDidLoad];
     
+    
+    self.locationManager = [[CLLocationManager alloc]init];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+        [self.locationManager requestAlwaysAuthorization];
+    }
+    
+    [self.locationManager startUpdatingLocation];
+    
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.textField.delegate = self;
@@ -33,8 +53,34 @@
     
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+#pragma mark CoreLocation
 
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
+
+{
+    self.currentLocation = locations.lastObject;
+    
+}
+
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    
+    UIAlertView* errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                             message:@"There was a problem in updating your location"
+                                                            delegate:nil
+                                                   cancelButtonTitle:@"OK"
+                                                   otherButtonTitles:nil];
+    
+    [errorAlertView show];
+    
+    
+}
+
+
+
+
+#pragma mark TableViewDataSource Methods
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     
     return 1;
@@ -63,18 +109,41 @@
     
 }
 
+#pragma mark TableViewDelegate Method
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+
+{
+    
+    MeetupDetailViewController* detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MeetupDetailViewController"];
+    
+    
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    
+    
+}
+#pragma mark TextFieldDelegate Method
+
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
+
 {
     
     [textField endEditing:YES];
     
-    [MeetupManager fetchMeetupsForParameters:@{@"search" : textField.text} withCompletionBlock:^(id response, NSError *error) {
+    NSString* formattedString = [textField.text stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+    
+    [MeetupManager fetchMeetupsForParameters:@{@"text" : formattedString,
+                                               @"lat" : [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.latitude],
+                                               @"lon" : [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.longitude]
+                                                }
+                         withCompletionBlock:^(id response, NSError *error) {
         
-        NSArray *results = response[@"results"];
+        
         
         self.meetupResultsArray = [[NSMutableArray alloc]init];
         
-        for(NSDictionary* result in results){
+        for(NSDictionary* result in response){
             
             [self.meetupResultsArray addObject:result[@"name"]];
             
@@ -86,7 +155,6 @@
     
     return YES;
 }
-
 
 
 @end

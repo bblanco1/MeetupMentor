@@ -10,4 +10,6 @@
 
 @interface ChooseMentorCollectionViewController : UICollectionViewController
 
+@property (nonatomic) NSMutableArray *mentors;
+
 @end

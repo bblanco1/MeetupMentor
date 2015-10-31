@@ -17,7 +17,9 @@
     
     AFHTTPRequestOperationManager* manager = [[AFHTTPRequestOperationManager alloc]init];
     
-    NSMutableString* URLString = [NSMutableString stringWithString:@"https://api.meetup.com/topics?key=144a6d614e37349b607f7e456066"];
+    
+    
+    NSMutableString* URLString = [NSMutableString stringWithString:@"https://api.meetup.com/find/groups?&key=144a6d614e37349b607f7e456066&sign=true&photo-host=public"];
     
     for(NSString* parameter in parameters){
         

@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		219C20CF023BCC15A88FC526 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C16A6F4D7BE61058DD4B2E2 /* libPods.a */; };
-		22CA7FF21BE526D2006C4144 /* MeetupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FF11BE526D2006C4144 /* MeetupsViewController.m */; };
-		22CA7FF51BE526F4006C4144 /* MeetupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FF41BE526F4006C4144 /* MeetupDetailViewController.m */; };
-		22CA7FF81BE52715006C4144 /* ChooseMentorCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FF71BE52715006C4144 /* ChooseMentorCollectionViewController.m */; };
-		22CA7FFB1BE52744006C4144 /* MyConnectionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FFA1BE52744006C4144 /* MyConnectionsTableViewController.m */; };
-		22CA7FFE1BE5275C006C4144 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FFD1BE5275C006C4144 /* ChatViewController.m */; };
+		22CA7FF21BE526D2006C4144 /* MeetupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FF11BE526D2006C4144 /* MeetupsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		22CA7FF51BE526F4006C4144 /* MeetupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FF41BE526F4006C4144 /* MeetupDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		22CA7FF81BE52715006C4144 /* ChooseMentorCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FF71BE52715006C4144 /* ChooseMentorCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		22CA7FFB1BE52744006C4144 /* MyConnectionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FFA1BE52744006C4144 /* MyConnectionsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		22CA7FFE1BE5275C006C4144 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FFD1BE5275C006C4144 /* ChatViewController.m */; settings = {ASSET_TAGS = (); }; };
+		22DFD4FF1BE5497D00BA26DD /* MentorDummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DFD4FE1BE5497D00BA26DD /* MentorDummy.m */; settings = {ASSET_TAGS = (); }; };
+		22E88D241BE544230002CAEE /* MentorCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E88D221BE544230002CAEE /* MentorCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		22E88D251BE544230002CAEE /* MentorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E88D231BE544230002CAEE /* MentorCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		3B77F9EC1BE5112A004020E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F9EB1BE5112A004020E4 /* main.m */; };
 		3B77F9EF1BE5112A004020E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F9EE1BE5112A004020E4 /* AppDelegate.m */; };
 		3B77F9F51BE5112A004020E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B77F9F31BE5112A004020E4 /* Main.storyboard */; };
@@ -21,7 +24,8 @@
 		3B77FA2E1BE5470D004020E4 /* CustomUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA2D1BE5470D004020E4 /* CustomUser.m */; };
 		3B77FA311BE547BA004020E4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA301BE547BA004020E4 /* LoginViewController.m */; };
 		3B77FA571BE5809E004020E4 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA561BE5809E004020E4 /* TabBarController.m */; };
-		5D761C531BE528CC00262204 /* MeetupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D761C521BE528CC00262204 /* MeetupManager.m */; };
+		5D761C531BE528CC00262204 /* MeetupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D761C521BE528CC00262204 /* MeetupManager.m */; settings = {ASSET_TAGS = (); }; };
+		5D761C561BE567BE00262204 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D761C541BE546E400262204 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,11 @@
 		22CA7FFA1BE52744006C4144 /* MyConnectionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyConnectionsTableViewController.m; sourceTree = "<group>"; };
 		22CA7FFC1BE5275C006C4144 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		22CA7FFD1BE5275C006C4144 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		22DFD4FD1BE5497D00BA26DD /* MentorDummy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MentorDummy.h; sourceTree = "<group>"; };
+		22DFD4FE1BE5497D00BA26DD /* MentorDummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MentorDummy.m; sourceTree = "<group>"; };
+		22E88D211BE544230002CAEE /* MentorCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MentorCollectionViewCell.h; sourceTree = "<group>"; };
+		22E88D221BE544230002CAEE /* MentorCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MentorCollectionViewCell.m; sourceTree = "<group>"; };
+		22E88D231BE544230002CAEE /* MentorCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MentorCollectionViewCell.xib; sourceTree = "<group>"; };
 		2C16A6F4D7BE61058DD4B2E2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B77F9E71BE5112A004020E4 /* MeetupMentor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetupMentor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B77F9EB1BE5112A004020E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,6 +63,7 @@
 		40E44ED531C23BBF9DE47B96 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5D761C511BE528CC00262204 /* MeetupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupManager.h; sourceTree = "<group>"; };
 		5D761C521BE528CC00262204 /* MeetupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetupManager.m; sourceTree = "<group>"; };
+		5D761C541BE546E400262204 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7341E06318417967568A0E84 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D761C561BE567BE00262204 /* CoreLocation.framework in Frameworks */,
 				219C20CF023BCC15A88FC526 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,8 +116,13 @@
 				22CA7FF11BE526D2006C4144 /* MeetupsViewController.m */,
 				22CA7FF31BE526F4006C4144 /* MeetupDetailViewController.h */,
 				22CA7FF41BE526F4006C4144 /* MeetupDetailViewController.m */,
+				22DFD4FD1BE5497D00BA26DD /* MentorDummy.h */,
+				22DFD4FE1BE5497D00BA26DD /* MentorDummy.m */,
 				22CA7FF61BE52715006C4144 /* ChooseMentorCollectionViewController.h */,
 				22CA7FF71BE52715006C4144 /* ChooseMentorCollectionViewController.m */,
+				22E88D211BE544230002CAEE /* MentorCollectionViewCell.h */,
+				22E88D221BE544230002CAEE /* MentorCollectionViewCell.m */,
+				22E88D231BE544230002CAEE /* MentorCollectionViewCell.xib */,
 				22CA7FF91BE52744006C4144 /* MyConnectionsTableViewController.h */,
 				22CA7FFA1BE52744006C4144 /* MyConnectionsTableViewController.m */,
 				22CA7FFC1BE5275C006C4144 /* ChatViewController.h */,
@@ -131,6 +147,7 @@
 		CFCD7652FB3A03B0CB9898BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5D761C541BE546E400262204 /* CoreLocation.framework */,
 				2C16A6F4D7BE61058DD4B2E2 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -206,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B77F9FA1BE5112A004020E4 /* LaunchScreen.storyboard in Resources */,
+				22E88D251BE544230002CAEE /* MentorCollectionViewCell.xib in Resources */,
 				3B77F9F71BE5112A004020E4 /* Assets.xcassets in Resources */,
 				3B77F9F51BE5112A004020E4 /* Main.storyboard in Resources */,
 			);
@@ -251,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E88D241BE544230002CAEE /* MentorCollectionViewCell.m in Sources */,
 				3B77F9EF1BE5112A004020E4 /* AppDelegate.m in Sources */,
 				22CA7FF81BE52715006C4144 /* ChooseMentorCollectionViewController.m in Sources */,
 				22CA7FF51BE526F4006C4144 /* MeetupDetailViewController.m in Sources */,
@@ -259,6 +278,7 @@
 				3B77FA571BE5809E004020E4 /* TabBarController.m in Sources */,
 				22CA7FF21BE526D2006C4144 /* MeetupsViewController.m in Sources */,
 				5D761C531BE528CC00262204 /* MeetupManager.m in Sources */,
+				22DFD4FF1BE5497D00BA26DD /* MentorDummy.m in Sources */,
 				22CA7FFE1BE5275C006C4144 /* ChatViewController.m in Sources */,
 				3B77FA2E1BE5470D004020E4 /* CustomUser.m in Sources */,
 				3B77F9EC1BE5112A004020E4 /* main.m in Sources */,
