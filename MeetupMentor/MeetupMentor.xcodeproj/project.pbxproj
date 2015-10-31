@@ -18,6 +18,7 @@
 		3B77F9F51BE5112A004020E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B77F9F31BE5112A004020E4 /* Main.storyboard */; };
 		3B77F9F71BE5112A004020E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B77F9F61BE5112A004020E4 /* Assets.xcassets */; };
 		3B77F9FA1BE5112A004020E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B77F9F81BE5112A004020E4 /* LaunchScreen.storyboard */; };
+		5D761C531BE528CC00262204 /* MeetupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D761C521BE528CC00262204 /* MeetupManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		3B77F9F91BE5112A004020E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B77F9FB1BE5112A004020E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40E44ED531C23BBF9DE47B96 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5D761C511BE528CC00262204 /* MeetupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupManager.h; sourceTree = "<group>"; };
+		5D761C521BE528CC00262204 /* MeetupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetupManager.m; sourceTree = "<group>"; };
 		7341E06318417967568A0E84 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +82,8 @@
 			children = (
 				3B77F9ED1BE5112A004020E4 /* AppDelegate.h */,
 				3B77F9EE1BE5112A004020E4 /* AppDelegate.m */,
+				5D761C511BE528CC00262204 /* MeetupManager.h */,
+				5D761C521BE528CC00262204 /* MeetupManager.m */,
 				22CA7FF01BE526D2006C4144 /* MeetupsViewController.h */,
 				22CA7FF11BE526D2006C4144 /* MeetupsViewController.m */,
 				22CA7FF31BE526F4006C4144 /* MeetupDetailViewController.h */,
@@ -234,6 +239,7 @@
 				22CA7FF51BE526F4006C4144 /* MeetupDetailViewController.m in Sources */,
 				22CA7FFB1BE52744006C4144 /* MyConnectionsTableViewController.m in Sources */,
 				22CA7FF21BE526D2006C4144 /* MeetupsViewController.m in Sources */,
+				5D761C531BE528CC00262204 /* MeetupManager.m in Sources */,
 				22CA7FFE1BE5275C006C4144 /* ChatViewController.m in Sources */,
 				3B77F9EC1BE5112A004020E4 /* main.m in Sources */,
 			);

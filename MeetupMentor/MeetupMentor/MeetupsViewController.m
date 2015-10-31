@@ -8,30 +8,85 @@
 
 #import "MeetupsViewController.h"
 
-@interface MeetupsViewController ()
+#import "MeetupManager.h"
+
+@interface MeetupsViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+
+@property (nonatomic, weak) IBOutlet UITableView* tableView;
+@property (nonatomic, weak) IBOutlet UITextField* textField;
+
+@property (nonatomic) NSMutableArray* meetupResultsArray;
 
 @end
 
 @implementation MeetupsViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.textField.delegate = self;
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+
+{
+    
+    return 1;
+    
 }
 
-/*
-#pragma mark - Navigation
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+{
+    
+    return self.meetupResultsArray.count;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+
+{
+    
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"MeetupCell" forIndexPath:indexPath];
+    
+    
+    cell.textLabel.text = self.meetupResultsArray[indexPath.row];
+    
+    
+    
+    return cell;
+    
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    
+    [textField endEditing:YES];
+    
+    [MeetupManager fetchMeetupsForParameters:@{@"search" : textField.text} withCompletionBlock:^(id response, NSError *error) {
+        
+        NSArray *results = response[@"results"];
+        
+        self.meetupResultsArray = [[NSMutableArray alloc]init];
+        
+        for(NSDictionary* result in results){
+            
+            [self.meetupResultsArray addObject:result[@"name"]];
+            
+        }
+        
+        [self.tableView reloadData];
+    }];
+    
+    
+    return YES;
+}
+
+
 
 @end
