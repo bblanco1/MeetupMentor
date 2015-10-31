@@ -71,7 +71,7 @@
         <!--MeetupDetailViewController-->
         <scene sceneID="ntf-hk-WE9">
             <objects>
-                <viewController id="PPb-nk-G2G" userLabel="MeetupDetailViewController" customClass="MeetupDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MeetupDetailViewController" id="PPb-nk-G2G" userLabel="MeetupDetailViewController" customClass="MeetupDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ANw-w1-Tgt"/>
                         <viewControllerLayoutGuide type="bottom" id="van-K1-Fwm"/>

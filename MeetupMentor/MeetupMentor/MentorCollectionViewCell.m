@@ -13,7 +13,8 @@
 - (void)awakeFromNib {
     
     self.mentorPhoto.layer.cornerRadius = 10.0;
-    self.mentorBio.layer.cornerRadius = 10.0;
+    self.mentorBio.layer.cornerRadius = 15.0;
+    self.mentorBio.clipsToBounds = YES;
 }
 
 @end

@@ -10,12 +10,18 @@
 
 #import "MeetupManager.h"
 
+#import "MeetupDetailViewController.h"
+
+
+
 @interface MeetupsViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView* tableView;
 @property (nonatomic, weak) IBOutlet UITextField* textField;
 
 @property (nonatomic) NSMutableArray* meetupResultsArray;
+
+
 
 @end
 
@@ -26,6 +32,9 @@
 {
     [super viewDidLoad];
     
+    
+    
+    
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.textField.delegate = self;
@@ -33,8 +42,11 @@
     
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 
+
+#pragma mark TableViewDataSource Methods
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     
     return 1;
@@ -63,7 +75,24 @@
     
 }
 
+#pragma mark TableViewDelegate Method
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+
+{
+    
+    MeetupDetailViewController* detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MeetupDetailViewController"];
+    
+    
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    
+    
+}
+#pragma mark TextFieldDelegate Method
+
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
+
 {
     
     [textField endEditing:YES];
@@ -86,7 +115,6 @@
     
     return YES;
 }
-
 
 
 @end

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,37 +13,62 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="268" height="402"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bhx-Z3-L4b">
-                        <rect key="frame" x="14" y="8" width="240" height="318"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bhx-Z3-L4b">
+                        <rect key="frame" x="15" y="19" width="242" height="240"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mentor bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPr-sW-fnH">
-                        <rect key="frame" x="15" y="334" width="239" height="60"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Mentor bio" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPr-sW-fnH">
+                        <rect key="frame" x="14" y="267" width="240" height="127"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="EST-v1-X41"/>
                             <constraint firstAttribute="width" constant="239" id="LYs-he-057"/>
+                            <constraint firstAttribute="height" constant="86" id="sc6-2D-oJ6"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EST-v1-X41"/>
+                                <exclude reference="LYs-he-057"/>
+                                <exclude reference="sc6-2D-oJ6"/>
+                            </mask>
+                        </variation>
                     </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Bhx-Z3-L4b" secondAttribute="trailing" constant="14" id="27g-cC-i9M"/>
+                <constraint firstItem="lPr-sW-fnH" firstAttribute="top" secondItem="Bhx-Z3-L4b" secondAttribute="bottom" constant="8" id="5JX-7x-2hv"/>
                 <constraint firstItem="Bhx-Z3-L4b" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="14" id="5LT-4g-Rv5"/>
+                <constraint firstItem="lPr-sW-fnH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="5mG-LL-Sos"/>
+                <constraint firstAttribute="bottom" secondItem="lPr-sW-fnH" secondAttribute="bottom" constant="8" id="6lq-6z-Bu5"/>
+                <constraint firstItem="Bhx-Z3-L4b" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="26" id="AZi-79-7iW"/>
+                <constraint firstItem="Bhx-Z3-L4b" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="19" id="AeQ-9Y-8ef"/>
+                <constraint firstItem="Bhx-Z3-L4b" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="19" id="BMq-uD-5NL"/>
+                <constraint firstAttribute="trailing" secondItem="Bhx-Z3-L4b" secondAttribute="trailing" constant="15" id="Fbn-1p-VuH"/>
+                <constraint firstAttribute="trailing" secondItem="lPr-sW-fnH" secondAttribute="trailing" constant="15" id="GyL-F7-1ck"/>
+                <constraint firstItem="Bhx-Z3-L4b" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="H9V-Bw-nGF"/>
+                <constraint firstItem="Bhx-Z3-L4b" firstAttribute="width" secondItem="lPr-sW-fnH" secondAttribute="height" multiplier="242:127" id="JOX-iw-qhg"/>
                 <constraint firstAttribute="trailing" secondItem="lPr-sW-fnH" secondAttribute="trailing" constant="14" id="KwG-eP-KpR"/>
+                <constraint firstItem="lPr-sW-fnH" firstAttribute="top" secondItem="Bhx-Z3-L4b" secondAttribute="bottom" constant="8" id="ORe-x4-E1T"/>
                 <constraint firstItem="lPr-sW-fnH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="UXg-6Q-BMb"/>
+                <constraint firstItem="Bhx-Z3-L4b" firstAttribute="width" secondItem="lPr-sW-fnH" secondAttribute="height" multiplier="80:47" id="XXI-0n-8Qa"/>
                 <constraint firstAttribute="bottom" secondItem="lPr-sW-fnH" secondAttribute="bottom" constant="8" id="fxy-73-Iss"/>
-                <constraint firstItem="lPr-sW-fnH" firstAttribute="top" secondItem="Bhx-Z3-L4b" secondAttribute="bottom" constant="8" id="jiH-ma-rCa"/>
-                <constraint firstItem="lPr-sW-fnH" firstAttribute="top" secondItem="Bhx-Z3-L4b" secondAttribute="bottom" constant="8" id="sBh-u4-9BO"/>
-                <constraint firstItem="Bhx-Z3-L4b" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="wlb-U4-usJ"/>
             </constraints>
             <size key="customSize" width="268" height="402"/>
             <variation key="default">
                 <mask key="constraints">
-                    <exclude reference="jiH-ma-rCa"/>
+                    <exclude reference="27g-cC-i9M"/>
+                    <exclude reference="5LT-4g-Rv5"/>
+                    <exclude reference="AZi-79-7iW"/>
+                    <exclude reference="AeQ-9Y-8ef"/>
+                    <exclude reference="XXI-0n-8Qa"/>
+                    <exclude reference="5JX-7x-2hv"/>
+                    <exclude reference="KwG-eP-KpR"/>
+                    <exclude reference="UXg-6Q-BMb"/>
+                    <exclude reference="fxy-73-Iss"/>
                 </mask>
             </variation>
             <connections>
