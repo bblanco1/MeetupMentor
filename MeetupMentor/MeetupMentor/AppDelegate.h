@@ -8,9 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <Sinch/Sinch.h>
 #import "Config.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, SINClientDelegate, SINMessageClientDelegate>
+
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) id<SINClient> sinchClient;
+@property (strong, nonatomic) id<SINMessageClient> sinchMessageClient;
+
+- (void)initSinchClient:(NSString *)userID;
+- (void)sendTextMessage:(NSString *)messageText toRecipient:(NSString *)recipientID;
+
 @end
 

@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKZ-Yg-g9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1438" y="66"/>
+            <point key="canvasLocation" x="1476" y="66"/>
         </scene>
         <!--MeetupDetailViewController-->
         <scene sceneID="ntf-hk-WE9">
@@ -178,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RYk-Oh-jbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2074" y="65"/>
+            <point key="canvasLocation" x="2128" y="65"/>
         </scene>
         <!--ChooseMentorCollectionViewController-->
         <scene sceneID="UQk-xj-4lq">
@@ -205,7 +205,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KMZ-9n-zfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2697" y="65"/>
+            <point key="canvasLocation" x="2809" y="65"/>
         </scene>
         <!--MyConnectionsTableViewController-->
         <scene sceneID="YqZ-Nn-e4X">
@@ -240,7 +240,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6u-m4-4l5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1428" y="727"/>
+            <point key="canvasLocation" x="1476" y="727"/>
         </scene>
         <!--ChatViewController-->
         <scene sceneID="fue-eG-Alp">
@@ -259,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1L-dF-JbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2074" y="727"/>
+            <point key="canvasLocation" x="2128" y="727"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="3uk-xO-DRk">
@@ -368,6 +368,7 @@
                         <outlet property="passwordField" destination="Ddq-xr-i6i" id="tdp-LU-TaT"/>
                         <outlet property="usernameField" destination="jLD-52-R1m" id="f12-lf-cho"/>
                         <outlet property="warningLabel" destination="4Uw-Sw-no0" id="tda-pz-OM1"/>
+                        <segue destination="3sx-kv-ixL" kind="show" identifier="LoginSegue" id="e1R-cJ-6wx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Wo-1Z-IfS" userLabel="First Responder" sceneMemberID="firstResponder"/>

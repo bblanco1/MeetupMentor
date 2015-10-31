@@ -20,6 +20,7 @@
 		3B77F9FA1BE5112A004020E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B77F9F81BE5112A004020E4 /* LaunchScreen.storyboard */; };
 		3B77FA2E1BE5470D004020E4 /* CustomUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA2D1BE5470D004020E4 /* CustomUser.m */; };
 		3B77FA311BE547BA004020E4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA301BE547BA004020E4 /* LoginViewController.m */; };
+		3B77FA571BE5809E004020E4 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA561BE5809E004020E4 /* TabBarController.m */; };
 		5D761C531BE528CC00262204 /* MeetupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D761C521BE528CC00262204 /* MeetupManager.m */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,8 @@
 		3B77FA2D1BE5470D004020E4 /* CustomUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUser.m; sourceTree = "<group>"; };
 		3B77FA2F1BE547BA004020E4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3B77FA301BE547BA004020E4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		3B77FA551BE5809E004020E4 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		3B77FA561BE5809E004020E4 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		40E44ED531C23BBF9DE47B96 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5D761C511BE528CC00262204 /* MeetupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupManager.h; sourceTree = "<group>"; };
 		5D761C521BE528CC00262204 /* MeetupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetupManager.m; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 				3B77FA2D1BE5470D004020E4 /* CustomUser.m */,
 				3B77FA2F1BE547BA004020E4 /* LoginViewController.h */,
 				3B77FA301BE547BA004020E4 /* LoginViewController.m */,
+				3B77FA551BE5809E004020E4 /* TabBarController.h */,
+				3B77FA561BE5809E004020E4 /* TabBarController.m */,
 				5D761C511BE528CC00262204 /* MeetupManager.h */,
 				5D761C521BE528CC00262204 /* MeetupManager.m */,
 				22CA7FF01BE526D2006C4144 /* MeetupsViewController.h */,
@@ -173,7 +178,7 @@
 				TargetAttributes = {
 					3B77F9E61BE5112A004020E4 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = N2DCZ2U592;
+						DevelopmentTeam = 3HZSHG8SUA;
 					};
 				};
 			};
@@ -251,6 +256,7 @@
 				22CA7FF51BE526F4006C4144 /* MeetupDetailViewController.m in Sources */,
 				22CA7FFB1BE52744006C4144 /* MyConnectionsTableViewController.m in Sources */,
 				3B77FA311BE547BA004020E4 /* LoginViewController.m in Sources */,
+				3B77FA571BE5809E004020E4 /* TabBarController.m in Sources */,
 				22CA7FF21BE526D2006C4144 /* MeetupsViewController.m in Sources */,
 				5D761C531BE528CC00262204 /* MeetupManager.m in Sources */,
 				22CA7FFE1BE5275C006C4144 /* ChatViewController.m in Sources */,

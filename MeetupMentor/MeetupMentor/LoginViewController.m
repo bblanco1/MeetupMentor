@@ -6,8 +6,10 @@
 //  Copyright © 2015 Elber Carneiro. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "AppDelegate.h"
 #import "CustomUser.h"
+#import "LoginViewController.h"
+#import "TabBarController.h"
 
 @interface LoginViewController ()
 
@@ -78,6 +80,13 @@
              // proceed to next screen after successful login
              weakSelf.warningLabel.hidden = YES;
              
+             // only initialize the sinch client after a successful login to Parse
+             // I suppose we are implementing this functionality inside of AppDelegate.m b/c
+             // we only want to handle the Config constants through there? Not sure why we
+             // wouldn't just set up this method here...
+             AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+             [appDelegate initSinchClient:self.usernameField.text];
+             
              [weakSelf performSegueWithIdentifier:@"LoginSegue" sender:self];
              
          } else {
@@ -87,6 +96,16 @@
              weakSelf.warningLabel.hidden = NO;
          }
      }];
+}
+
+#pragma mark - Navigation methods
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    // make sure user list view controller has your user name
+    if ([segue.identifier isEqualToString:@"LoginSegue"]) {
+        TabBarController *destinationViewController = segue.destinationViewController;
+        destinationViewController.myUserID = self.usernameField.text;
+    }
 }
 
 @end
