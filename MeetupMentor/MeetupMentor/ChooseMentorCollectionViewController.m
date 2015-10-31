@@ -7,6 +7,8 @@
 //
 
 #import "ChooseMentorCollectionViewController.h"
+#import "MentorDummy.h"
+#import "MentorCollectionViewCell.h"
 
 @interface ChooseMentorCollectionViewController ()
 
@@ -22,70 +24,118 @@ static NSString * const reuseIdentifier = @"Cell";
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"MentorCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
     
-    // Do any additional setup after loading the view.
-}
+    self.collectionView.layer.backgroundColor = [UIColor whiteColor].CGColor;
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+    self.mentors = [[NSMutableArray alloc] init];
+    
+    UIImage *elberImage = [UIImage imageNamed:@"elber"];
+    
+    MentorDummy *elber = [[MentorDummy alloc] init];
+  
+    elber.photo = elberImage;
+    elber.bio = @"Elber is a swell guy ... Hic - A - Doo - La!";
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    UIImage *jackieImage = [UIImage imageNamed:@"jackie"];
+    
+    MentorDummy *jackie = [[MentorDummy alloc] init];
+    
+    jackie.photo = jackieImage;
+    jackie.bio = @"Jackie is a swell gal ... Hic - A - Doo - La!";
+    
+    UIImage *brianImage = [UIImage imageNamed:@"brian"];
+    
+    MentorDummy *brian = [[MentorDummy alloc] init];
+    
+    brian.photo = brianImage;
+    brian.bio = @"Brian is a swell guy ... Hic - A - Doo - La!";
+    
+    UIImage *danielImage = [UIImage imageNamed:@"daniel"];
+    
+    MentorDummy *daniel = [[MentorDummy alloc] init];
+    
+    daniel.photo = danielImage;
+    daniel.bio = @"Daniel is a swell guy ... Hic - A - Doo - La!";
+    
+    [self.mentors addObject:brian];
+    [self.mentors addObject:elber];
+    [self.mentors addObject:jackie];
+    [self.mentors addObject:daniel];
 }
-*/
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+
+    return self.mentors.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    // Configure the cell
+    MentorCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
+    MentorDummy *mentorDummy = [self.mentors objectAtIndex:indexPath.row];
+    cell.mentorBio.text = mentorDummy.bio;
+    cell.mentorPhoto.image = mentorDummy.photo;
     
     return cell;
+    
+}
+
+#pragma mark - UICollectionView customization
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return CGSizeMake(self.collectionView.bounds.size.width, self.collectionView.bounds.size.height);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 0.0;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 0.0;
+}
+
+- (UIEdgeInsets)collectionView:
+(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    
+    return UIEdgeInsetsMake(0,0,0,0);
+}
+
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+    
+    // Determine which table cell the scrolling will stop on.
+    CGFloat cellWidth = self.collectionView.bounds.size.width;
+    NSInteger cellIndex = floor(targetContentOffset->x / cellWidth);
+    
+    // Round to the next cell if the scrolling will stop over halfway to the next cell.
+    if ((targetContentOffset->x - (floor(targetContentOffset->x / cellWidth) * cellWidth)) > cellWidth) {
+        cellIndex++;
+    }
+    
+    // Adjust stopping point to exact beginning of cell.
+    targetContentOffset->x = cellIndex * cellWidth;
 }
 
 #pragma mark <UICollectionViewDelegate>
 
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     return YES;
 }
-*/
+
 
 /*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
 - (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
 	return NO;
 }
