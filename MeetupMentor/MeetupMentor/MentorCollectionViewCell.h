@@ -12,5 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *mentorPhoto;
 @property (weak, nonatomic) IBOutlet UILabel *mentorBio;
+@property (weak, nonatomic) IBOutlet UIImageView *notificationImageView;
+
 
 @end

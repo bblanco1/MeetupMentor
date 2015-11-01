@@ -35,6 +35,13 @@
                             </mask>
                         </variation>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tmp-000.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="1BY-6Q-cRI">
+                        <rect key="frame" x="210" y="70" width="50" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="MOO-rm-iNj"/>
+                            <constraint firstAttribute="width" constant="50" id="pyg-SE-T5A"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
@@ -55,7 +62,9 @@
                 <constraint firstItem="lPr-sW-fnH" firstAttribute="top" secondItem="Bhx-Z3-L4b" secondAttribute="bottom" constant="8" id="ORe-x4-E1T"/>
                 <constraint firstItem="lPr-sW-fnH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="UXg-6Q-BMb"/>
                 <constraint firstItem="Bhx-Z3-L4b" firstAttribute="width" secondItem="lPr-sW-fnH" secondAttribute="height" multiplier="80:47" id="XXI-0n-8Qa"/>
+                <constraint firstAttribute="trailing" secondItem="1BY-6Q-cRI" secondAttribute="trailing" constant="8" id="Y74-Kf-7wX"/>
                 <constraint firstAttribute="bottom" secondItem="lPr-sW-fnH" secondAttribute="bottom" constant="8" id="fxy-73-Iss"/>
+                <constraint firstItem="1BY-6Q-cRI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="70" id="mIp-dK-tSg"/>
             </constraints>
             <size key="customSize" width="268" height="402"/>
             <variation key="default">
@@ -74,8 +83,12 @@
             <connections>
                 <outlet property="mentorBio" destination="lPr-sW-fnH" id="poq-y6-GLY"/>
                 <outlet property="mentorPhoto" destination="Bhx-Z3-L4b" id="Yt2-an-ved"/>
+                <outlet property="notificationImageView" destination="1BY-6Q-cRI" id="O27-cI-mRd"/>
             </connections>
             <point key="canvasLocation" x="282" y="417"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="tmp-000.jpeg" width="800" height="600"/>
+    </resources>
 </document>

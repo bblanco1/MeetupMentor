@@ -9,7 +9,6 @@
 #import "ChooseMentorCollectionViewController.h"
 #import "MentorDummy.h"
 #import "MentorCollectionViewCell.h"
-#import "NotificationCollectionReusableView.h"
 
 @interface ChooseMentorCollectionViewController ()
 
@@ -77,22 +76,31 @@ static NSString * const reuseIdentifier = @"Cell";
     henna.photo = hennaImage;
     henna.bio = @"Henna is a swell gal ... Hic - A - Doo - La!";
     
+    UIImage *derekImage = [UIImage imageNamed:@"derek"];
+    
+    MentorDummy *derek = [[MentorDummy alloc] init];
+    
+    derek.photo = derekImage;
+    derek.bio = @"Derek is a swell guy ... Hic - A - Doo - La!";
+    
+    UIImage *fatimaImage = [UIImage imageNamed:@"fatima"];
+    
+    MentorDummy *fatima = [[MentorDummy alloc] init];
+    
+    fatima.photo = fatimaImage;
+    fatima.bio = @"Kaira is a swell gal ... Hic - A - Doo - La!";
+    
     [self.mentors addObject:brian];
     [self.mentors addObject:elber];
     [self.mentors addObject:jackie];
     [self.mentors addObject:daniel];
-    [self.mentors addObject:brian];
-    [self.mentors addObject:elber];
-    [self.mentors addObject:jackie];
-    [self.mentors addObject:daniel];
-    [self.mentors addObject:brian];
-    [self.mentors addObject:elber];
-    [self.mentors addObject:jackie];
-    [self.mentors addObject:daniel];
+    [self.mentors addObject:derek];
+    [self.mentors addObject:henna];
+    [self.mentors addObject:fatima];
+    [self.mentors addObject:diana];
 }
 
 - (void) fireNotification {
-    [self.collectionViewLayout registerNib:[UINib nibWithNibName:@"NotificationCollectionReusableView" bundle:nil] forDecorationViewOfKind: @"notificationAnimation"];
     
 }
 
@@ -168,7 +176,7 @@ static NSString * const reuseIdentifier = @"Cell";
                                                           handler:^(UIAlertAction * action) {
 //                                                              MentorDummy *mentorDummy = [self.mentors objectAtIndex:indexPath.row];
 //                                                              [[NSUserDefaults standardUserDefaults] setObject:mentorDummy forKey:@"connection1"];
-                                                              [self fireNotification];
+                                                              [self performSelector:@selector(fireNotification) withObject:self afterDelay:2.0];
                                                           }];
     
     UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
