@@ -925,7 +925,7 @@
 		3B77F9E91BE5112A004020E4 /* MeetupMentor */ = {
 			isa = PBXGroup;
 			children = (
-				3B77FA581BE58A5C004020E4 /* ChatTest */,
+				3B77FA581BE58A5C004020E4 /* Chat */,
 				3B77FA2B1BE54683004020E4 /* Config.h */,
 				3B77F9ED1BE5112A004020E4 /* AppDelegate.h */,
 				3B77F9EE1BE5112A004020E4 /* AppDelegate.m */,
@@ -966,7 +966,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3B77FA581BE58A5C004020E4 /* ChatTest */ = {
+		3B77FA581BE58A5C004020E4 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
 				3B77FA2F1BE547BA004020E4 /* LoginViewController.h */,
@@ -980,7 +980,7 @@
 				3B77FA681BE5BA57004020E4 /* MessageCell.h */,
 				3B77FA691BE5BA57004020E4 /* MessageCell.m */,
 			);
-			name = ChatTest;
+			name = Chat;
 			sourceTree = "<group>";
 		};
 		CFCD7652FB3A03B0CB9898BF /* Frameworks */ = {

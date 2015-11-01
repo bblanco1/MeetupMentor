@@ -113,8 +113,12 @@
     NSDictionary *info = [notification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
     
+    UITabBar *tb = self.tabBarController.tabBar;
+    NSLog(@"tb: %@", tb);
+    CGSize tbSize = tb.frame.size;
+    
     if (self.keyboardOffsetConstraint.constant == 8) {
-        self.keyboardOffsetConstraint.constant += kbSize.height;
+        self.keyboardOffsetConstraint.constant += kbSize.height - tbSize.height;
         [self scrollTableToBottom];
     }
 }
@@ -158,19 +162,28 @@
 }
 
 - (void)configureCell:(MessageCell *)messageCell forIndexPath:(NSIndexPath *)indexPath {
+    
     Message *chatMessage = self.messagesArray[indexPath.row];
     
+    NSString *tempText = [NSString new];
+    
+    if ([chatMessage.text isEqualToString:@""]) {
+        tempText = @"Got it.";
+    } else {
+        tempText = chatMessage.text;
+    }
+        
     if ([chatMessage.senderId isEqualToString:self.myUserID]) {
         // if the message was sent by myself
-        messageCell.titleLabel.text = @"You said:";
-        messageCell.detailLabel.text = chatMessage.text;
+        messageCell.titleLabel.text = @"You:";
+        messageCell.detailLabel.text = tempText;
         messageCell.titleLabel.textColor = [UIColor purpleColor];
     } else {
-        // if the message was sent by the chat mate
-        messageCell.titleLabel.text = [NSString stringWithFormat:@"%@ said:", self.chatMateID];
-        messageCell.detailLabel.text = chatMessage.text;
+        messageCell.titleLabel.text = [NSString stringWithFormat:@"%@:", self.chatMateID];
+        messageCell.detailLabel.text = tempText;
         messageCell.titleLabel.textColor = [UIColor orangeColor];
     }
+
 }
 
 #pragma mark - UITextfieldDelegate methods
