@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		219C20CF023BCC15A88FC526 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C16A6F4D7BE61058DD4B2E2 /* libPods.a */; };
-		22CA7FF21BE526D2006C4144 /* MeetupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FF11BE526D2006C4144 /* MeetupsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		22CA7FF51BE526F4006C4144 /* MeetupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FF41BE526F4006C4144 /* MeetupDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
-		22CA7FF81BE52715006C4144 /* ChooseMentorCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FF71BE52715006C4144 /* ChooseMentorCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
-		22CA7FFB1BE52744006C4144 /* MyConnectionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FFA1BE52744006C4144 /* MyConnectionsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		22CA7FFE1BE5275C006C4144 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FFD1BE5275C006C4144 /* ChatViewController.m */; settings = {ASSET_TAGS = (); }; };
-		22DFD4FF1BE5497D00BA26DD /* MentorDummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DFD4FE1BE5497D00BA26DD /* MentorDummy.m */; settings = {ASSET_TAGS = (); }; };
-		22E88D241BE544230002CAEE /* MentorCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E88D221BE544230002CAEE /* MentorCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		22E88D251BE544230002CAEE /* MentorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E88D231BE544230002CAEE /* MentorCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		22CA7FF21BE526D2006C4144 /* MeetupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FF11BE526D2006C4144 /* MeetupsViewController.m */; };
+		22CA7FF51BE526F4006C4144 /* MeetupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FF41BE526F4006C4144 /* MeetupDetailViewController.m */; };
+		22CA7FF81BE52715006C4144 /* ChooseMentorCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FF71BE52715006C4144 /* ChooseMentorCollectionViewController.m */; };
+		22CA7FFB1BE52744006C4144 /* MyConnectionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FFA1BE52744006C4144 /* MyConnectionsTableViewController.m */; };
+		22CA7FFE1BE5275C006C4144 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FFD1BE5275C006C4144 /* ChatViewController.m */; };
+		22DFD4FF1BE5497D00BA26DD /* MentorDummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DFD4FE1BE5497D00BA26DD /* MentorDummy.m */; };
+		22E88D241BE544230002CAEE /* MentorCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E88D221BE544230002CAEE /* MentorCollectionViewCell.m */; };
+		22E88D251BE544230002CAEE /* MentorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E88D231BE544230002CAEE /* MentorCollectionViewCell.xib */; };
 		3B77F9EC1BE5112A004020E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F9EB1BE5112A004020E4 /* main.m */; };
 		3B77F9EF1BE5112A004020E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F9EE1BE5112A004020E4 /* AppDelegate.m */; };
 		3B77F9F51BE5112A004020E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B77F9F31BE5112A004020E4 /* Main.storyboard */; };
@@ -24,9 +24,9 @@
 		3B77FA2E1BE5470D004020E4 /* CustomUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA2D1BE5470D004020E4 /* CustomUser.m */; };
 		3B77FA311BE547BA004020E4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA301BE547BA004020E4 /* LoginViewController.m */; };
 		3B77FA571BE5809E004020E4 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA561BE5809E004020E4 /* TabBarController.m */; };
-		5D761C531BE528CC00262204 /* MeetupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D761C521BE528CC00262204 /* MeetupManager.m */; settings = {ASSET_TAGS = (); }; };
+		5D761C531BE528CC00262204 /* MeetupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D761C521BE528CC00262204 /* MeetupManager.m */; };
 		5D761C561BE567BE00262204 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D761C541BE546E400262204 /* CoreLocation.framework */; };
-		5D761C591BE57FBA00262204 /* MeetupDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D761C581BE57FBA00262204 /* MeetupDataObject.m */; settings = {ASSET_TAGS = (); }; };
+		5D761C591BE57FBA00262204 /* MeetupDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D761C581BE57FBA00262204 /* MeetupDataObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -179,6 +179,7 @@
 				3B77F9E41BE5112A004020E4 /* Frameworks */,
 				3B77F9E51BE5112A004020E4 /* Resources */,
 				1298B2BB510D2A290CFE2DBD /* Copy Pods Resources */,
+				803EC9B6B576609D0CDB5C19 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,6 +251,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		803EC9B6B576609D0CDB5C19 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BC7E4A240B6079F5890B0CFC /* Check Pods Manifest.lock */ = {
