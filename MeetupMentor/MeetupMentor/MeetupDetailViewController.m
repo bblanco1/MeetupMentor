@@ -10,10 +10,13 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 
 
-@interface MeetupDetailViewController () 
+@interface MeetupDetailViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (nonatomic, weak) IBOutlet UIImageView* meetupImageView;
 @property (nonatomic, weak) IBOutlet UITextView* textView;
+@property (nonatomic, weak) IBOutlet UIPickerView* pickerView;
+
+@property (nonatomic) NSArray* pickerViewData;
 
 @end
 
@@ -21,6 +24,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.pickerView.delegate = self;
+    self.pickerView.dataSource = self;
+    
+    self.pickerViewData = [[NSArray alloc]init];
+    self.pickerViewData = @[@"I am a mentor", @"I need a mentor"];
+
+    
+    
+    [self.textView scrollRangeToVisible:NSMakeRange(0, 1)];
+
+    
     NSLog(@"%@", self.meetupDataObject.meetupGroupDescription);
     [self.textView setText:self.meetupDataObject.meetupGroupDescription];
     [self.meetupImageView sd_setImageWithURL:[NSURL URLWithString:self.meetupDataObject.meetupImageURL]
@@ -31,6 +46,26 @@
                                  
                              }];
     
+}
+
+#pragma mark PickerView methods
+
+// The number of columns of data
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+// The number of rows of data
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return self.pickerViewData.count;
+}
+
+// The data to return for the row and component (column) that's being passed in
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return self.pickerViewData[row];
 }
 
 @end
