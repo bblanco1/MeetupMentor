@@ -27,12 +27,14 @@ PODS:
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
   - SinchRTC (3.7.1)
+  - UIImageViewSoftFrameAnimations (1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - Parse
   - SDWebImage (~> 3.7)
   - SinchRTC
+  - UIImageViewSoftFrameAnimations (~> 1.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399
@@ -40,5 +42,6 @@ SPEC CHECKSUMS:
   Parse: 54a965c8c19a6dde90284ab654dbcc77ef8c001b
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SinchRTC: 58b08d88160e514c08a1c03305728349113d5379
+  UIImageViewSoftFrameAnimations: bcca3c9c36bd2d7783dd24649b64b75cd7674bd9
 
-COCOAPODS: 0.39.0
+COCOAPODS: 0.38.2

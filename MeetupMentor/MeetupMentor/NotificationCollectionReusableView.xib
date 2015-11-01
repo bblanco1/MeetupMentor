@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="notificationIdentifier" id="U6b-Vx-4bR" customClass="NotificationCollectionReusableView">
+            <rect key="frame" x="0.0" y="0.0" width="85" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tmp-0.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="JCK-0C-wFs">
+                    <rect key="frame" x="0.0" y="0.0" width="85" height="60"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="JCK-0C-wFs" secondAttribute="bottom" id="KRz-FW-aBi"/>
+                <constraint firstItem="JCK-0C-wFs" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="YER-Yp-j0g"/>
+                <constraint firstItem="JCK-0C-wFs" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="f9D-Sc-yJl"/>
+                <constraint firstAttribute="trailing" secondItem="JCK-0C-wFs" secondAttribute="trailing" id="xAd-dg-HSC"/>
+            </constraints>
+            <connections>
+                <outlet property="notificationImageView" destination="JCK-0C-wFs" id="cuU-hr-qNP"/>
+            </connections>
+            <point key="canvasLocation" x="188.5" y="346"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="tmp-0.jpeg" width="800" height="600"/>
+    </resources>
+</document>

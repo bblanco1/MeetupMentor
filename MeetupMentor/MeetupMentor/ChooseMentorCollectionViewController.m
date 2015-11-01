@@ -9,8 +9,11 @@
 #import "ChooseMentorCollectionViewController.h"
 #import "MentorDummy.h"
 #import "MentorCollectionViewCell.h"
+#import "NotificationCollectionReusableView.h"
 
 @interface ChooseMentorCollectionViewController ()
+
+//@property (nonatomic) UIView *notificationViewContainer;
 
 @end
 
@@ -72,6 +75,11 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.mentors addObject:elber];
     [self.mentors addObject:jackie];
     [self.mentors addObject:daniel];
+}
+
+- (void) fireNotification {
+    [self.collectionViewLayout registerNib:[UINib nibWithNibName:@"NotificationCollectionReusableView" bundle:nil] forDecorationViewOfKind: @"notificationAnimation"];
+    
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -144,9 +152,9 @@ static NSString * const reuseIdentifier = @"Cell";
     
     UIAlertAction* selectMentor = [UIAlertAction actionWithTitle:@"Select mentor" style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction * action) {
-                                                              MentorDummy *mentorDummy = [self.mentors objectAtIndex:indexPath.row];
-                                                              [[NSUserDefaults standardUserDefaults] setObject:mentorDummy forKey:@"connection1"];
-                                                          
+//                                                              MentorDummy *mentorDummy = [self.mentors objectAtIndex:indexPath.row];
+//                                                              [[NSUserDefaults standardUserDefaults] setObject:mentorDummy forKey:@"connection1"];
+                                                              [self fireNotification];
                                                           }];
     
     UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
