@@ -40,8 +40,7 @@
     
     [self.textView scrollRangeToVisible:NSMakeRange(0, 1)];
     
-    self.meetupImageView.layer.borderColor = [UIColor colorWithRed:225/255.0 green:57/255.0 blue:66/255.0 alpha:1].CGColor;
-    self.meetupImageView.layer.borderWidth = 2.0;
+    self.meetupImageView.clipsToBounds = YES;
     self.meetupImageView.layer.cornerRadius = 10.0;
     
     self.pickerView.layer.cornerRadius = 10.0;
