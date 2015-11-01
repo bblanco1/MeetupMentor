@@ -284,9 +284,7 @@
 				22CA7FF21BE526D2006C4144 /* MeetupsViewController.m in Sources */,
 				5D761C531BE528CC00262204 /* MeetupManager.m in Sources */,
 				22DFD4FF1BE5497D00BA26DD /* MentorDummy.m in Sources */,
-=======
 				5D761C591BE57FBA00262204 /* MeetupDataObject.m in Sources */,
->>>>>>> passing of datafigured out passing of data to MeetupDetailViewController
 				22CA7FFE1BE5275C006C4144 /* ChatViewController.m in Sources */,
 				3B77FA2E1BE5470D004020E4 /* CustomUser.m in Sources */,
 				3B77F9EC1BE5112A004020E4 /* main.m in Sources */,
