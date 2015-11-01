@@ -10,6 +10,6 @@
 
 @interface CustomUser : PFUser <PFSubclassing>
 
-@property (retain) NSString* favoriteNumber;
+@property (retain) NSString *favoriteNumber;
 
 @end
