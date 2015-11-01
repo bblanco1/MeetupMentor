@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lDB-EH-xnO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lDB-EH-xnO">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,6 +19,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crumpled-white-paper-texture" translatesAutoresizingMaskIntoConstraints="NO" id="aWi-lq-3je">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <animations/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="search for a meetup" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aod-O8-Ax4">
                                 <rect key="frame" x="20" y="72" width="560" height="30"/>
@@ -35,7 +36,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ndv-ls-NdO" id="Kgh-2m-NGN">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -109,7 +110,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FLc-RJ-eUx" id="r0Q-ag-57x">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sT-QE-M4w">
@@ -224,6 +225,7 @@
                             </pickerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LAb-MZ-uQW">
                                 <rect key="frame" x="20" y="165" width="560" height="261"/>
+                                <animations/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -447,9 +449,11 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crumpled-white-paper-texture" translatesAutoresizingMaskIntoConstraints="NO" id="phj-YY-URs">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Meetup-icon" translatesAutoresizingMaskIntoConstraints="NO" id="5iW-OQ-9XF">
                                 <rect key="frame" x="40" y="28" width="520" height="231"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="207" id="Fwu-Mv-H2V"/>
                                     <constraint firstAttribute="height" constant="156" id="GIA-99-2bn"/>
@@ -469,6 +473,7 @@
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for mentors" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bhN-Bz-oOA">
                                 <rect key="frame" x="40" y="285" width="520" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="qk1-AU-mlU"/>
                                 </constraints>
@@ -476,12 +481,14 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="send"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mentor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpV-B7-egp">
-                                <rect key="frame" x="183" y="323" width="234.5" height="77"/>
+                                <rect key="frame" x="183" y="323" width="235" height="77"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="65"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="phj-YY-URs" secondAttribute="trailing" id="0jf-Ob-jIg"/>
@@ -564,7 +571,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sGQ-MD-imn" id="lkO-NR-gdy">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
@@ -589,7 +596,7 @@
         <scene sceneID="Yce-07-MTX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vMF-Xc-HUe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Meetups" id="6J7-45-MPM"/>
+                    <tabBarItem key="tabBarItem" title="My Meetups" image="meetup-small" id="6J7-45-MPM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rqF-VW-uVV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -609,7 +616,7 @@
         <scene sceneID="FC0-ND-4di">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bQi-dp-gzq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Connections" id="n1H-4O-B9n"/>
+                    <tabBarItem key="tabBarItem" title="My Connections" image="relations-512" id="n1H-4O-B9n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qZO-0H-SPU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -629,11 +636,12 @@
         <scene sceneID="o6s-IK-TY0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dka-Mc-ZSh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mentors" id="u6U-iX-OUG"/>
+                    <tabBarItem key="tabBarItem" title="Mentors" image="noun_26677_cc" id="u6U-iX-OUG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bei-YN-D9f">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -648,5 +656,8 @@
     <resources>
         <image name="Meetup-icon" width="1024" height="1024"/>
         <image name="crumpled-white-paper-texture" width="2048" height="1536"/>
+        <image name="meetup-small" width="33" height="22"/>
+        <image name="noun_26677_cc" width="33" height="33"/>
+        <image name="relations-512" width="33" height="33"/>
     </resources>
 </document>
