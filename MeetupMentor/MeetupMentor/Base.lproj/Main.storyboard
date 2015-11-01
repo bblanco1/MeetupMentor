@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lDB-EH-xnO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lDB-EH-xnO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -35,7 +35,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ndv-ls-NdO" id="Kgh-2m-NGN">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -109,7 +109,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FLc-RJ-eUx" id="r0Q-ag-57x">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sT-QE-M4w">
@@ -276,6 +276,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="attendingMeetupButton" destination="4zu-LZ-NAv" id="eMq-OK-4tx"/>
                         <outlet property="meetupImageView" destination="QH5-9P-cqa" id="H94-ke-d7m"/>
                         <outlet property="pickerView" destination="NVt-Ah-Uwl" id="lYp-SQ-DUE"/>
                         <outlet property="textView" destination="LAb-MZ-uQW" id="637-n2-eWe"/>
@@ -379,10 +380,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohR-5n-M3U">
-                                <rect key="frame" x="408" y="253" width="42" height="30"/>
+                                <rect key="frame" x="400" y="253" width="50" height="30"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="TUE-st-fCw"/>
+                                    <constraint firstAttribute="width" constant="50" id="TUE-st-fCw"/>
                                     <constraint firstAttribute="height" constant="30" id="vOZ-wD-A3H"/>
                                 </constraints>
                                 <state key="normal" title="Log in"/>
@@ -391,11 +392,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEY-ax-1rE">
-                                <rect key="frame" x="150" y="253" width="52" height="30"/>
+                                <rect key="frame" x="150" y="253" width="60" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="8V4-qq-D9G"/>
-                                    <constraint firstAttribute="width" constant="52" id="fIm-K1-mqh"/>
+                                    <constraint firstAttribute="width" constant="60" id="fIm-K1-mqh"/>
                                 </constraints>
                                 <state key="normal" title="Sign up"/>
                                 <connections>
@@ -423,7 +424,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="ohR-5n-M3U" id="sHf-5q-JLU"/>
                         <outlet property="passwordField" destination="Ddq-xr-i6i" id="tdp-LU-TaT"/>
+                        <outlet property="signUpButton" destination="DEY-ax-1rE" id="o2s-ie-XET"/>
                         <outlet property="usernameField" destination="jLD-52-R1m" id="f12-lf-cho"/>
                         <outlet property="warningLabel" destination="4Uw-Sw-no0" id="tda-pz-OM1"/>
                         <segue destination="d4S-TW-SJ8" kind="show" identifier="LoginSegue" id="WO6-c9-MCp"/>
@@ -476,7 +479,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="send"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mentor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpV-B7-egp">
-                                <rect key="frame" x="183" y="323" width="234.5" height="77"/>
+                                <rect key="frame" x="183" y="323" width="235" height="77"/>
                                 <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="65"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -564,7 +567,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sGQ-MD-imn" id="lkO-NR-gdy">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
