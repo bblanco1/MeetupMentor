@@ -11,8 +11,7 @@
 		22CA7FF21BE526D2006C4144 /* MeetupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FF11BE526D2006C4144 /* MeetupsViewController.m */; };
 		22CA7FF51BE526F4006C4144 /* MeetupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FF41BE526F4006C4144 /* MeetupDetailViewController.m */; };
 		22CA7FF81BE52715006C4144 /* ChooseMentorCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FF71BE52715006C4144 /* ChooseMentorCollectionViewController.m */; };
-		22CA7FFB1BE52744006C4144 /* MyConnectionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FFA1BE52744006C4144 /* MyConnectionsTableViewController.m */; };
-		22CA7FFE1BE5275C006C4144 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA7FFD1BE5275C006C4144 /* ChatViewController.m */; };
+		22CA7FFE1BE5275C006C4144 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		22DFD4FF1BE5497D00BA26DD /* MentorDummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DFD4FE1BE5497D00BA26DD /* MentorDummy.m */; };
 		22DFD7101BE5EFBD00BA26DD /* tmp-000.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22DFD6031BE5EFBC00BA26DD /* tmp-000.jpeg */; settings = {ASSET_TAGS = (); }; };
 		22DFD7111BE5EFBD00BA26DD /* tmp-001.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22DFD6041BE5EFBC00BA26DD /* tmp-001.jpeg */; settings = {ASSET_TAGS = (); }; };
@@ -283,6 +282,7 @@
 		22DFD81A1BE5EFBD00BA26DD /* tmp-097.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22DFD70D1BE5EFBD00BA26DD /* tmp-097.jpeg */; settings = {ASSET_TAGS = (); }; };
 		22DFD81B1BE5EFBD00BA26DD /* tmp-098.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22DFD70E1BE5EFBD00BA26DD /* tmp-098.jpeg */; settings = {ASSET_TAGS = (); }; };
 		22DFD81C1BE5EFBD00BA26DD /* tmp-099.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 22DFD70F1BE5EFBD00BA26DD /* tmp-099.jpeg */; settings = {ASSET_TAGS = (); }; };
+		22DFD8371BE68DEC00BA26DD /* SearchMentorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DFD8361BE68DEC00BA26DD /* SearchMentorsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		22E88D241BE544230002CAEE /* MentorCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E88D221BE544230002CAEE /* MentorCollectionViewCell.m */; };
 		22E88D251BE544230002CAEE /* MentorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E88D231BE544230002CAEE /* MentorCollectionViewCell.xib */; };
 		3B77F9EC1BE5112A004020E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77F9EB1BE5112A004020E4 /* main.m */; };
@@ -292,7 +292,6 @@
 		3B77F9FA1BE5112A004020E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B77F9F81BE5112A004020E4 /* LaunchScreen.storyboard */; };
 		3B77FA2E1BE5470D004020E4 /* CustomUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA2D1BE5470D004020E4 /* CustomUser.m */; };
 		3B77FA311BE547BA004020E4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA301BE547BA004020E4 /* LoginViewController.m */; };
-		3B77FA571BE5809E004020E4 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA561BE5809E004020E4 /* TabBarController.m */; };
 		3B77FA5E1BE58AC3004020E4 /* ChatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA5D1BE58AC3004020E4 /* ChatTableViewController.m */; };
 		3B77FA641BE59020004020E4 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA631BE59020004020E4 /* Message.m */; };
 		3B77FA671BE5A63E004020E4 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA661BE5A63E004020E4 /* MessagesViewController.m */; };
@@ -580,6 +579,8 @@
 		22DFD70D1BE5EFBD00BA26DD /* tmp-097.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tmp-097.jpeg"; sourceTree = "<group>"; };
 		22DFD70E1BE5EFBD00BA26DD /* tmp-098.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tmp-098.jpeg"; sourceTree = "<group>"; };
 		22DFD70F1BE5EFBD00BA26DD /* tmp-099.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tmp-099.jpeg"; sourceTree = "<group>"; };
+		22DFD8351BE68DEC00BA26DD /* SearchMentorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchMentorsViewController.h; sourceTree = "<group>"; };
+		22DFD8361BE68DEC00BA26DD /* SearchMentorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchMentorsViewController.m; sourceTree = "<group>"; };
 		22E88D211BE544230002CAEE /* MentorCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MentorCollectionViewCell.h; sourceTree = "<group>"; };
 		22E88D221BE544230002CAEE /* MentorCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MentorCollectionViewCell.m; sourceTree = "<group>"; };
 		22E88D231BE544230002CAEE /* MentorCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MentorCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -934,6 +935,8 @@
 				5D761C521BE528CC00262204 /* MeetupManager.m */,
 				5D761C571BE57FBA00262204 /* MeetupDataObject.h */,
 				5D761C581BE57FBA00262204 /* MeetupDataObject.m */,
+				22DFD8351BE68DEC00BA26DD /* SearchMentorsViewController.h */,
+				22DFD8361BE68DEC00BA26DD /* SearchMentorsViewController.m */,
 				22CA7FF01BE526D2006C4144 /* MeetupsViewController.h */,
 				22CA7FF11BE526D2006C4144 /* MeetupsViewController.m */,
 				22CA7FF31BE526F4006C4144 /* MeetupDetailViewController.h */,
@@ -1384,7 +1387,8 @@
 				5D761C531BE528CC00262204 /* MeetupManager.m in Sources */,
 				22DFD4FF1BE5497D00BA26DD /* MentorDummy.m in Sources */,
 				5D761C591BE57FBA00262204 /* MeetupDataObject.m in Sources */,
-				22CA7FFE1BE5275C006C4144 /* ChatViewController.m in Sources */,
+				22DFD8371BE68DEC00BA26DD /* SearchMentorsViewController.m in Sources */,
+				22CA7FFE1BE5275C006C4144 /* (null) in Sources */,
 				3B77FA671BE5A63E004020E4 /* MessagesViewController.m in Sources */,
 				3B77FA2E1BE5470D004020E4 /* CustomUser.m in Sources */,
 				3B77FA6A1BE5BA57004020E4 /* MessageCell.m in Sources */,

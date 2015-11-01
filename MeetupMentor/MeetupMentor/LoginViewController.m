@@ -10,6 +10,7 @@
 #import "CustomUser.h"
 #import "LoginViewController.h"
 #import "ChatTableViewController.h"
+#import "SearchMentorsViewController.h"
 
 @interface LoginViewController ()
 
@@ -120,10 +121,10 @@
     
     // make sure user list view controller has your user name
     if ([segue.identifier isEqualToString:@"LoginSegue"]) {
-        UITabBarController *tabBarController = segue.destinationViewController;
-        UINavigationController *navController = tabBarController.viewControllers[1];
-        ChatTableViewController *tvc = (ChatTableViewController *)navController.topViewController;
-        tvc.myUserID = self.usernameField.text;
+        
+        SearchMentorsViewController *vc = [segue destinationViewController];
+        vc.myUserID = self.usernameField.text;
+        
     }
     
 }
