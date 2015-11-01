@@ -9,7 +9,7 @@
 #import "MeetupsViewController.h"
 
 #import "MeetupManager.h"
-
+#import "MeetupDataObject.h"
 #import "MeetupDetailViewController.h"
 
 #import <CoreLocation/CoreLocation.h>
@@ -20,7 +20,7 @@
 @property (nonatomic, weak) IBOutlet UITableView* tableView;
 @property (nonatomic, weak) IBOutlet UITextField* textField;
 
-@property (nonatomic) NSMutableArray* meetupResultsArray;
+@property (nonatomic) NSMutableArray<MeetupDataObject*>* meetupResultsArray;
 
 @property (nonatomic) CLLocationManager* locationManager;
 @property (nonatomic) CLLocation* currentLocation;
@@ -101,7 +101,7 @@
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"MeetupCell" forIndexPath:indexPath];
     
     
-    cell.textLabel.text = self.meetupResultsArray[indexPath.row];
+    cell.textLabel.text = self.meetupResultsArray[indexPath.row].meetupGroupName;
     
     
     
@@ -118,6 +118,7 @@
     
     MeetupDetailViewController* detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MeetupDetailViewController"];
     
+    detailViewController.meetupDataObject = self.meetupResultsArray[indexPath.row];
     
     [self.navigationController pushViewController:detailViewController animated:YES];
     
@@ -145,7 +146,16 @@
         
         for(NSDictionary* result in response){
             
-            [self.meetupResultsArray addObject:result[@"name"]];
+            
+            MeetupDataObject* dataObject = [[MeetupDataObject alloc]init];
+            dataObject.meetupGroupName = result[@"name"];
+            NSAttributedString* descriptionWithHTMLStripping = [[NSAttributedString alloc] initWithData:[result[@"description"] dataUsingEncoding:NSUTF8StringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: [NSNumber numberWithInt:NSUTF8StringEncoding]} documentAttributes:nil error:nil];
+            
+            dataObject.meetupGroupDescription = [descriptionWithHTMLStripping string];
+            dataObject.meetupImageURL = result[@"group_photo"][@"photo_link"];
+
+            
+            [self.meetupResultsArray addObject:dataObject];
             
         }
         

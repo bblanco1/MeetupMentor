@@ -7,11 +7,13 @@
 //
 
 #import "MeetupDetailViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 
 @interface MeetupDetailViewController () 
 
-
+@property (nonatomic, weak) IBOutlet UIImageView* meetupImageView;
+@property (nonatomic, weak) IBOutlet UITextView* textView;
 
 @end
 
@@ -19,7 +21,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSLog(@"%@", self.meetupDataObject.meetupGroupDescription);
+    [self.textView setText:self.meetupDataObject.meetupGroupDescription];
+    [self.meetupImageView sd_setImageWithURL:[NSURL URLWithString:self.meetupDataObject.meetupImageURL]
+                      placeholderImage:nil
+                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                 
+                                 self.meetupImageView.image = image;
+                                 
+                             }];
+    
 }
 
 @end
