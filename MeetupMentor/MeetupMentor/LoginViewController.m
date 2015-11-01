@@ -17,12 +17,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UILabel *warningLabel;
 
-
 @end
 
 @implementation LoginViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     self.warningLabel.text = @"";
@@ -31,19 +31,22 @@
     // set up gesture to hide keyboard when user taps outside the text fields
     UITapGestureRecognizer *tapViewGR = [[UITapGestureRecognizer alloc]
                                          initWithTarget:self action:@selector(didTapOnView)];
+    
     [self.view addGestureRecognizer:tapViewGR];
+    
 }
 
 #pragma mark - User interface behavioral methods
 // if you tap outside the text fields, this method will be used to hide the keyboard
 - (void)didTapOnView {
+    
     [self.usernameField resignFirstResponder];
     [self.passwordField resignFirstResponder];
+    
 }
 
 #pragma mark - Functional methods
 - (IBAction)didTapSignup:(UIButton *)sender {
-    // Parse SDK user class
     
     CustomUser *user = (CustomUser *)[CustomUser object];
     //PFUser *pfUser = [PFUser user];
@@ -57,26 +60,34 @@
     // references to self in a callback block.
     __weak typeof(self) weakSelf = self;
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
         if (!error) {
+            
             weakSelf.warningLabel.textColor = [UIColor greenColor];
             weakSelf.warningLabel.text = @"Signup successful!";
             weakSelf.warningLabel.hidden = NO;
+            
         } else {
+            
             weakSelf.warningLabel.textColor = [UIColor redColor];
             weakSelf.warningLabel.text = [error userInfo][@"error"];
             weakSelf.warningLabel.hidden = NO;
+            
         }
+        
     }];
+    
 }
 
 - (IBAction)didTapLogin:(UIButton *)sender {
+    
     __weak typeof(self) weakSelf = self;
     [PFUser logInWithUsernameInBackground:self.usernameField.text
                                  password:self.passwordField.text
-                                    block:^(PFUser *pfUser, NSError *error)
-     {
+                                    block:^(PFUser *pfUser, NSError *error) {
          
-         if (pfUser && !error) {
+        if (pfUser && !error) {
+             
              // proceed to next screen after successful login
              weakSelf.warningLabel.hidden = YES;
              
@@ -90,14 +101,18 @@
              NSLog(@"Logged in successfully");
              [weakSelf performSegueWithIdentifier:@"LoginSegue" sender:self];
              
-         } else {
+        } else {
+             
              // the login failed, show error
              weakSelf.warningLabel.textColor = [UIColor redColor];
              weakSelf.warningLabel.text = [error userInfo][@"error"];
              weakSelf.warningLabel.hidden = NO;
-            NSLog(@"Login error");
-         }
-     }];
+             NSLog(@"Login error");
+             
+        }
+                                        
+    }];
+    
 }
 
 #pragma mark - Navigation methods
@@ -110,6 +125,7 @@
         ChatTableViewController *tvc = (ChatTableViewController *)navController.topViewController;
         tvc.myUserID = self.usernameField.text;
     }
+    
 }
 
 @end
