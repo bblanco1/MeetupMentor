@@ -152,7 +152,7 @@
             NSAttributedString* descriptionWithHTMLStripping = [[NSAttributedString alloc] initWithData:[result[@"description"] dataUsingEncoding:NSUTF8StringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: [NSNumber numberWithInt:NSUTF8StringEncoding]} documentAttributes:nil error:nil];
             
             dataObject.meetupGroupDescription = [descriptionWithHTMLStripping string];
-            dataObject.meetupImageURL = result[@"group_phot"][@"photo_link"];
+            dataObject.meetupImageURL = result[@"group_photo"][@"photo_link"];
 
             
             [self.meetupResultsArray addObject:dataObject];

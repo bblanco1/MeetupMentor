@@ -21,7 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.textView.text = self.meetupDataObject.meetupGroupDescription;
+    NSLog(@"%@", self.meetupDataObject.meetupGroupDescription);
+    [self.textView setText:self.meetupDataObject.meetupGroupDescription];
     [self.meetupImageView sd_setImageWithURL:[NSURL URLWithString:self.meetupDataObject.meetupImageURL]
                       placeholderImage:nil
                              completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
