@@ -40,56 +40,56 @@ static NSString * const reuseIdentifier = @"Cell";
     MentorDummy *elber = [[MentorDummy alloc] init];
   
     elber.photo = elberImage;
-    elber.bio = @"Elber is a swell guy ... Hic - A - Doo - La!";
+    elber.bio = @"Elber is an Objective-C developer\n This developer has been to NY Tech Meetup";
 
     UIImage *jackieImage = [UIImage imageNamed:@"jackie"];
     
     MentorDummy *jackie = [[MentorDummy alloc] init];
     
     jackie.photo = jackieImage;
-    jackie.bio = @"Jackie is a swell gal ... Hic - A - Doo - La!";
+    jackie.bio = @"Jackie is an Objective-C developer\n This developer has been to NY Tech Meetup";
     
     UIImage *brianImage = [UIImage imageNamed:@"brian"];
     
     MentorDummy *brian = [[MentorDummy alloc] init];
     
     brian.photo = brianImage;
-    brian.bio = @"Brian is a swell guy ... Hic - A - Doo - La!";
+    brian.bio = @"Brian is an Objective-C developer\n This developer has been to NY Tech Meetup";
     
     UIImage *danielImage = [UIImage imageNamed:@"daniel"];
     
     MentorDummy *daniel = [[MentorDummy alloc] init];
     
     daniel.photo = danielImage;
-    daniel.bio = @"Daniel is a swell guy ... Hic - A - Doo - La!";
+    daniel.bio = @"Daniel is an Objective-C developer\n This developer has been to NY Tech Meetup";
     
     UIImage *dianaImage = [UIImage imageNamed:@"diana"];
     
     MentorDummy *diana = [[MentorDummy alloc] init];
     
     diana.photo = dianaImage;
-    diana.bio = @"Diana is a swell gal ... Hic - A - Doo - La!";
+    diana.bio = @"Diana is an Objective-C developer\n This developer has been to NY Tech Meetup";
     
     UIImage *hennaImage = [UIImage imageNamed:@"henna"];
     
     MentorDummy *henna = [[MentorDummy alloc] init];
     
     henna.photo = hennaImage;
-    henna.bio = @"Henna is a swell gal ... Hic - A - Doo - La!";
+    henna.bio = @"Henna is an Objective-C developer\n This developer has been to NY Tech Meetup";
     
     UIImage *derekImage = [UIImage imageNamed:@"derek"];
     
     MentorDummy *derek = [[MentorDummy alloc] init];
     
     derek.photo = derekImage;
-    derek.bio = @"Derek is a swell guy ... Hic - A - Doo - La!";
+    derek.bio = @"Derek is an Objective-C developer\n This developer has been to NY Tech Meetup";
     
     UIImage *fatimaImage = [UIImage imageNamed:@"fatima"];
     
     MentorDummy *fatima = [[MentorDummy alloc] init];
     
     fatima.photo = fatimaImage;
-    fatima.bio = @"Kaira is a swell gal ... Hic - A - Doo - La!";
+    fatima.bio = @"Kaira Brian is an Objective-C developer\n This developer has been to NY Tech Meetup";
     
     [self.mentors addObject:brian];
     [self.mentors addObject:elber];
@@ -102,6 +102,8 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (void) fireNotification {
+    MentorCollectionViewCell *cell = (MentorCollectionViewCell *) [self.collectionView cellForItemAtIndexPath:[self.collectionView indexPathsForSelectedItems][0]];
+    [cell startAnimation];
     
 }
 
@@ -175,9 +177,8 @@ static NSString * const reuseIdentifier = @"Cell";
     
     UIAlertAction* selectMentor = [UIAlertAction actionWithTitle:@"Select mentor" style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction * action) {
-//                                                              MentorDummy *mentorDummy = [self.mentors objectAtIndex:indexPath.row];
-//                                                              [[NSUserDefaults standardUserDefaults] setObject:mentorDummy forKey:@"connection1"];
-                                                              [self performSelector:@selector(fireNotification) withObject:self afterDelay:2.0];
+                                                              
+                                                              [self performSelector:@selector(fireNotification) withObject: self  afterDelay:2.0];
                                                           }];
     
     UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault

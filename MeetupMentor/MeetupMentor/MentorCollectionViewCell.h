@@ -14,5 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *mentorBio;
 @property (weak, nonatomic) IBOutlet UIImageView *notificationImageView;
 
+- (void) startAnimation;
+-(void) hideAnimation;
+
 
 @end

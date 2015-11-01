@@ -18,12 +18,17 @@
 
 @property (nonatomic) NSArray* pickerViewData;
 
+@property (weak, nonatomic) IBOutlet UIButton *attendingMeetupButton;
+
 @end
 
 @implementation MeetupDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.attendingMeetupButton.layer.cornerRadius = 10; // this value vary as per your desire
+    self.attendingMeetupButton.clipsToBounds = YES;
     
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
@@ -35,8 +40,7 @@
     
     [self.textView scrollRangeToVisible:NSMakeRange(0, 1)];
     
-    self.meetupImageView.layer.borderColor = [UIColor colorWithRed:225/255.0 green:57/255.0 blue:66/255.0 alpha:1].CGColor;
-    self.meetupImageView.layer.borderWidth = 2.0;
+    self.meetupImageView.clipsToBounds = YES;
     self.meetupImageView.layer.cornerRadius = 10.0;
     
     self.pickerView.layer.cornerRadius = 10.0;
