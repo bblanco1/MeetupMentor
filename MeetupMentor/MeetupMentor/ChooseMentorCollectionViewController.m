@@ -24,6 +24,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [super viewDidLoad];
     
     self.navigationItem.title = @"Choose A Mentor";
+    self.collectionView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"crumpled-white-paper-texture"]];
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;

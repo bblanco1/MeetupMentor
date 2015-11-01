@@ -24,6 +24,7 @@
 
 @property (nonatomic) CLLocationManager* locationManager;
 @property (nonatomic) CLLocation* currentLocation;
+@property (weak, nonatomic) IBOutlet UIImageView *crumpledImageView;
 
 
 @end
@@ -50,6 +51,10 @@
     self.tableView.delegate = self;
     self.textField.delegate = self;
     
+    self.textField.layer.borderColor = [UIColor colorWithRed:225/255.0 green:57/255.0 blue:66/255.0 alpha:1].CGColor;
+    self.textField.layer.borderWidth = 2.0;
+    self.textField.layer.cornerRadius = 10.0;
+
     
 }
 
@@ -102,7 +107,8 @@
     
     
     cell.textLabel.text = self.meetupResultsArray[indexPath.row].meetupGroupName;
-    
+    cell.layer.backgroundColor = [UIColor clearColor].CGColor;
+    cell.backgroundColor = [UIColor clearColor];
     
     
     return cell;

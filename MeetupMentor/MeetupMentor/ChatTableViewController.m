@@ -24,6 +24,7 @@
     
     self.navigationItem.title = self.myUserID;
     self.connectionsArray = [NSMutableArray new];
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"crumpled-white-paper-texture"]];
     
     self.activeMessagesViewController = nil;
     [self retrieveConnectionsFromParse];
@@ -42,6 +43,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"connectionIdentifier" forIndexPath:indexPath];
     
     cell.textLabel.text = self.connectionsArray[indexPath.row];
+    cell.layer.backgroundColor = [UIColor clearColor].CGColor;
+    cell.backgroundColor = [UIColor clearColor];
     
     return cell;
 }

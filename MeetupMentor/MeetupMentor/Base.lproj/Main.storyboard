@@ -17,16 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crumpled-white-paper-texture" translatesAutoresizingMaskIntoConstraints="NO" id="aWi-lq-3je">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="search for a meetup" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aod-O8-Ax4">
                                 <rect key="frame" x="20" y="72" width="560" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5UZ-Hb-xPP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5UZ-Hb-xPP">
                                 <rect key="frame" x="0.0" y="120" width="600" height="431"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MeetupCell" id="Ndv-ls-NdO">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
@@ -45,16 +48,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Aod-O8-Ax4" secondAttribute="trailing" constant="20" id="9hh-Q4-g1i"/>
+                            <constraint firstItem="9SY-qy-dIG" firstAttribute="top" secondItem="aWi-lq-3je" secondAttribute="bottom" id="DYy-yM-Pfa"/>
                             <constraint firstItem="Aod-O8-Ax4" firstAttribute="leading" secondItem="lKb-w2-pXq" secondAttribute="leading" constant="20" id="K7E-nL-3BG"/>
                             <constraint firstAttribute="trailing" secondItem="5UZ-Hb-xPP" secondAttribute="trailing" id="KN2-sX-PHD"/>
                             <constraint firstItem="5UZ-Hb-xPP" firstAttribute="leading" secondItem="lKb-w2-pXq" secondAttribute="leading" id="LNq-IF-fwz"/>
                             <constraint firstItem="5UZ-Hb-xPP" firstAttribute="top" secondItem="Aod-O8-Ax4" secondAttribute="bottom" constant="18" id="W9X-yM-vkB"/>
+                            <constraint firstAttribute="trailing" secondItem="aWi-lq-3je" secondAttribute="trailing" id="YVc-my-yMK"/>
                             <constraint firstItem="Aod-O8-Ax4" firstAttribute="leading" secondItem="lKb-w2-pXq" secondAttribute="leading" constant="20" id="fLF-bo-8B4"/>
+                            <constraint firstItem="aWi-lq-3je" firstAttribute="leading" secondItem="lKb-w2-pXq" secondAttribute="leading" id="fg4-7T-WSw"/>
                             <constraint firstItem="9SY-qy-dIG" firstAttribute="top" secondItem="5UZ-Hb-xPP" secondAttribute="bottom" id="gST-34-p4P"/>
                             <constraint firstItem="Aod-O8-Ax4" firstAttribute="top" secondItem="swC-JZ-ntk" secondAttribute="bottom" constant="8" id="guc-xK-x7m"/>
                             <constraint firstItem="5UZ-Hb-xPP" firstAttribute="top" secondItem="Aod-O8-Ax4" secondAttribute="bottom" constant="18" id="rWU-dv-OgT"/>
                             <constraint firstAttribute="trailing" secondItem="Aod-O8-Ax4" secondAttribute="trailing" constant="20" id="tw4-F6-WQo"/>
                             <constraint firstItem="Aod-O8-Ax4" firstAttribute="top" secondItem="swC-JZ-ntk" secondAttribute="bottom" constant="8" id="wQN-mm-O25"/>
+                            <constraint firstItem="aWi-lq-3je" firstAttribute="top" secondItem="lKb-w2-pXq" secondAttribute="top" id="zsL-QY-j4O"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -66,6 +73,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="My Meetups" id="kOh-XW-paV"/>
                     <connections>
+                        <outlet property="crumpledImageView" destination="aWi-lq-3je" id="uNc-9P-KBG"/>
                         <outlet property="tableView" destination="5UZ-Hb-xPP" id="lpK-Ka-TRy"/>
                         <outlet property="textField" destination="Aod-O8-Ax4" id="zS0-FD-JWZ"/>
                     </connections>
@@ -550,7 +558,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="connectionIdentifier" id="sGQ-MD-imn">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
