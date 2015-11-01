@@ -89,7 +89,7 @@ static NSString * const reuseIdentifier = @"Cell";
     MentorDummy *fatima = [[MentorDummy alloc] init];
     
     fatima.photo = fatimaImage;
-    fatima.bio = @"Kaira Brian is an Objective-C developer\n This developer has been to NY Tech Meetup";
+    fatima.bio = @"Kaira is an Objective-C developer\n This developer has been to NY Tech Meetup";
     
     [self.mentors addObject:brian];
     [self.mentors addObject:elber];
