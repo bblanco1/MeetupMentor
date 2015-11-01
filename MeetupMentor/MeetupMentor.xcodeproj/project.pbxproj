@@ -26,6 +26,7 @@
 		3B77FA571BE5809E004020E4 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B77FA561BE5809E004020E4 /* TabBarController.m */; };
 		5D761C531BE528CC00262204 /* MeetupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D761C521BE528CC00262204 /* MeetupManager.m */; settings = {ASSET_TAGS = (); }; };
 		5D761C561BE567BE00262204 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D761C541BE546E400262204 /* CoreLocation.framework */; };
+		5D761C591BE57FBA00262204 /* MeetupDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D761C581BE57FBA00262204 /* MeetupDataObject.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		5D761C511BE528CC00262204 /* MeetupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupManager.h; sourceTree = "<group>"; };
 		5D761C521BE528CC00262204 /* MeetupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetupManager.m; sourceTree = "<group>"; };
 		5D761C541BE546E400262204 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5D761C571BE57FBA00262204 /* MeetupDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetupDataObject.h; sourceTree = "<group>"; };
+		5D761C581BE57FBA00262204 /* MeetupDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetupDataObject.m; sourceTree = "<group>"; };
 		7341E06318417967568A0E84 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +115,8 @@
 				3B77FA561BE5809E004020E4 /* TabBarController.m */,
 				5D761C511BE528CC00262204 /* MeetupManager.h */,
 				5D761C521BE528CC00262204 /* MeetupManager.m */,
+				5D761C571BE57FBA00262204 /* MeetupDataObject.h */,
+				5D761C581BE57FBA00262204 /* MeetupDataObject.m */,
 				22CA7FF01BE526D2006C4144 /* MeetupsViewController.h */,
 				22CA7FF11BE526D2006C4144 /* MeetupsViewController.m */,
 				22CA7FF31BE526F4006C4144 /* MeetupDetailViewController.h */,
@@ -279,6 +284,9 @@
 				22CA7FF21BE526D2006C4144 /* MeetupsViewController.m in Sources */,
 				5D761C531BE528CC00262204 /* MeetupManager.m in Sources */,
 				22DFD4FF1BE5497D00BA26DD /* MentorDummy.m in Sources */,
+=======
+				5D761C591BE57FBA00262204 /* MeetupDataObject.m in Sources */,
+>>>>>>> passing of datafigured out passing of data to MeetupDetailViewController
 				22CA7FFE1BE5275C006C4144 /* ChatViewController.m in Sources */,
 				3B77FA2E1BE5470D004020E4 /* CustomUser.m in Sources */,
 				3B77F9EC1BE5112A004020E4 /* main.m in Sources */,

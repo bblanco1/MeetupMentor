@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MeetupDataObject.h"
 
 @interface MeetupDetailViewController : UIViewController
+
+@property (nonatomic) MeetupDataObject* meetupDataObject;
 
 @end
