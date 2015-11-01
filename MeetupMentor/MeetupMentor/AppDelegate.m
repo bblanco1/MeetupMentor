@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "CustomUser.h"
+#import <ChameleonFramework/Chameleon.h>
+
 
 @interface AppDelegate ()
 
@@ -23,7 +25,9 @@
 #pragma mark - Lifecycle methods
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    
+    
+    [Chameleon setGlobalThemeUsingPrimaryColor:[UIColor colorWithHexString:@"E13942"] withContentStyle:UIContentStyleContrast];
     [CustomUser registerSubclass];
     [Parse setApplicationId:PARSE_APPLICATION_ID clientKey:PARSE_CLIENT_KEY];
     

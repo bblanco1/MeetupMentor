@@ -21,6 +21,9 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Bolts/Tasks (1.4.0)
+  - ChameleonFramework (2.0.4):
+    - ChameleonFramework/Default (= 2.0.4)
+  - ChameleonFramework/Default (2.0.4)
   - Parse (1.9.1):
     - Bolts/Tasks (>= 1.4.0)
   - RDVTabBarController (1.1.9)
@@ -32,6 +35,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - ChameleonFramework
   - Parse
   - RDVTabBarController
   - SDWebImage (~> 3.7)
@@ -41,10 +45,11 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399
   Bolts: 0e9bce58b9b9f5e8a7a4d47b16d2fabec289072b
+  ChameleonFramework: 5abe69b1f2a6cc79c3c435fcd9d3d855748225ee
   Parse: 54a965c8c19a6dde90284ab654dbcc77ef8c001b
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SinchRTC: 58b08d88160e514c08a1c03305728349113d5379
   UIImageViewSoftFrameAnimations: bcca3c9c36bd2d7783dd24649b64b75cd7674bd9
 
-COCOAPODS: 0.39.0
+COCOAPODS: 0.38.2
