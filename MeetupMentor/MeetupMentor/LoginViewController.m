@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "CustomUser.h"
 #import "LoginViewController.h"
-#import "TabBarController.h"
+#import "ChatTableViewController.h"
 
 @interface LoginViewController ()
 
@@ -87,6 +87,7 @@
              AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
              [appDelegate initSinchClient:self.usernameField.text];
              
+             NSLog(@"Logged in successfully");
              [weakSelf performSegueWithIdentifier:@"LoginSegue" sender:self];
              
          } else {
@@ -94,6 +95,7 @@
              weakSelf.warningLabel.textColor = [UIColor redColor];
              weakSelf.warningLabel.text = [error userInfo][@"error"];
              weakSelf.warningLabel.hidden = NO;
+            NSLog(@"Login error");
          }
      }];
 }
@@ -103,8 +105,10 @@
     
     // make sure user list view controller has your user name
     if ([segue.identifier isEqualToString:@"LoginSegue"]) {
-        TabBarController *destinationViewController = segue.destinationViewController;
-        destinationViewController.myUserID = self.usernameField.text;
+        UITabBarController *tabBarController = segue.destinationViewController;
+        UINavigationController *navController = tabBarController.viewControllers[1];
+        ChatTableViewController *tvc = (ChatTableViewController *)navController.topViewController;
+        tvc.myUserID = self.usernameField.text;
     }
 }
 
