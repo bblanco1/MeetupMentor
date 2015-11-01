@@ -162,18 +162,15 @@
 }
 
 - (void)configureCell:(MessageCell *)messageCell forIndexPath:(NSIndexPath *)indexPath {
+    
     Message *chatMessage = self.messagesArray[indexPath.row];
     
     NSString *tempText = [NSString new];
     
     if ([chatMessage.text isEqualToString:@""]) {
-        
         tempText = @"Got it.";
-        
     } else {
-        
         tempText = chatMessage.text;
-        
     }
         
     if ([chatMessage.senderId isEqualToString:self.myUserID]) {
@@ -182,7 +179,9 @@
         messageCell.detailLabel.text = tempText;
         messageCell.titleLabel.textColor = [UIColor purpleColor];
     } else {
-   
+        messageCell.titleLabel.text = [NSString stringWithFormat:@"%@:", self.chatMateID];
+        messageCell.detailLabel.text = tempText;
+        messageCell.titleLabel.textColor = [UIColor orangeColor];
     }
 
 }
