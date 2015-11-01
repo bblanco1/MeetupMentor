@@ -113,8 +113,12 @@
     NSDictionary *info = [notification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
     
+    UITabBar *tb = self.tabBarController.tabBar;
+    NSLog(@"tb: %@", tb);
+    CGSize tbSize = tb.frame.size;
+    
     if (self.keyboardOffsetConstraint.constant == 8) {
-        self.keyboardOffsetConstraint.constant += kbSize.height;
+        self.keyboardOffsetConstraint.constant += kbSize.height - tbSize.height;
         [self scrollTableToBottom];
     }
 }
