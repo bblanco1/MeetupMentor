@@ -1,0 +1,1 @@
+../../../UIImageViewSoftFrameAnimations/Pod/Classes/UIImageView+SoftFrameAnimations.h

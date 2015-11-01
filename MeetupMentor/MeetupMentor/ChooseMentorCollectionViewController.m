@@ -63,6 +63,20 @@ static NSString * const reuseIdentifier = @"Cell";
     daniel.photo = danielImage;
     daniel.bio = @"Daniel is a swell guy ... Hic - A - Doo - La!";
     
+    UIImage *dianaImage = [UIImage imageNamed:@"diana"];
+    
+    MentorDummy *diana = [[MentorDummy alloc] init];
+    
+    diana.photo = dianaImage;
+    diana.bio = @"Diana is a swell gal ... Hic - A - Doo - La!";
+    
+    UIImage *hennaImage = [UIImage imageNamed:@"henna"];
+    
+    MentorDummy *henna = [[MentorDummy alloc] init];
+    
+    henna.photo = hennaImage;
+    henna.bio = @"Henna is a swell gal ... Hic - A - Doo - La!";
+    
     [self.mentors addObject:brian];
     [self.mentors addObject:elber];
     [self.mentors addObject:jackie];
