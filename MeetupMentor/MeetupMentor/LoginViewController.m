@@ -18,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UILabel *warningLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *signUpButton;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+
 @end
 
 @implementation LoginViewController
@@ -25,6 +28,12 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    self.signUpButton.layer.cornerRadius = 10; // this value vary as per your desire
+    self.signUpButton.clipsToBounds = YES;
+    
+    self.loginButton.layer.cornerRadius = 10; // this value vary as per your desire
+    self.loginButton.clipsToBounds = YES;
     
     self.warningLabel.text = @"";
     self.warningLabel.hidden = YES;

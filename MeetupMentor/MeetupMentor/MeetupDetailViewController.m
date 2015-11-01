@@ -18,12 +18,17 @@
 
 @property (nonatomic) NSArray* pickerViewData;
 
+@property (weak, nonatomic) IBOutlet UIButton *attendingMeetupButton;
+
 @end
 
 @implementation MeetupDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.attendingMeetupButton.layer.cornerRadius = 10; // this value vary as per your desire
+    self.attendingMeetupButton.clipsToBounds = YES;
     
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
