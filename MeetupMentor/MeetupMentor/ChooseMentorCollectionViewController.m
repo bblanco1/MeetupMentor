@@ -102,6 +102,8 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (void) fireNotification {
+    MentorCollectionViewCell *cell = (MentorCollectionViewCell *) [self.collectionView cellForItemAtIndexPath:[self.collectionView indexPathsForSelectedItems][0]];
+    [cell startAnimation];
     
 }
 
@@ -175,9 +177,8 @@ static NSString * const reuseIdentifier = @"Cell";
     
     UIAlertAction* selectMentor = [UIAlertAction actionWithTitle:@"Select mentor" style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction * action) {
-//                                                              MentorDummy *mentorDummy = [self.mentors objectAtIndex:indexPath.row];
-//                                                              [[NSUserDefaults standardUserDefaults] setObject:mentorDummy forKey:@"connection1"];
-                                                              [self performSelector:@selector(fireNotification) withObject:self afterDelay:2.0];
+                                                              
+                                                              [self performSelector:@selector(fireNotification) withObject: self  afterDelay:2.0];
                                                           }];
     
     UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
