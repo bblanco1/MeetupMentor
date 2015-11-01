@@ -21,6 +21,8 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"Choose A Mentor";
+    
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -141,7 +143,11 @@ static NSString * const reuseIdentifier = @"Cell";
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     
     UIAlertAction* selectMentor = [UIAlertAction actionWithTitle:@"Select mentor" style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * action) {}];
+                                                          handler:^(UIAlertAction * action) {
+                                                              MentorDummy *mentorDummy = [self.mentors objectAtIndex:indexPath.row];
+                                                              [[NSUserDefaults standardUserDefaults] setObject:mentorDummy forKey:@"connection1"];
+                                                          
+                                                          }];
     
     UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
                                                          handler:^(UIAlertAction * action) {}];
